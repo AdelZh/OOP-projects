@@ -1,0 +1,57 @@
+ Student student=new Student("Adel",23, "2345", "Kyrgyz");
+        
+
+
+        Student student1=new Student();
+        student1.name="Farida";
+        student1.phoneNumber="23456";
+        student1.dateOfBirth=20;
+        student1.nationality="Kyrgyz";
+
+        Student student2=new Student("Alina", 15, "34567", "Kyrgyz");
+
+        Student[]arr=new Student[3];
+        arr[0]=student;
+        arr[1]=student1;
+        arr[2]=student2;
+        System.out.println(arr[2]);
+        System.out.println(arr[0]);
+        System.out.println(arr[1]+"\n");
+
+
+        System.out.println("Second option: ");
+        Student[] arr1={student1,student, student2};
+        for(int i=0; i<arr1.length; i++){
+            System.out.println(arr1[i]);
+        }
+    }
+}
+public class Student {
+
+
+    String name;
+    int dateOfBirth;
+    String phoneNumber;
+    String nationality;
+
+    public Student(String name, int dateOfBirth, String phoneNumber, String nationality){
+        this.name=name;
+        this.dateOfBirth=dateOfBirth;
+        this.phoneNumber=phoneNumber;
+        this.nationality=nationality;
+
+    }
+    public Student(){
+
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", dateOfBirth=" + dateOfBirth +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", nationality='" + nationality + '\'' +
+                '}';
+    }
+}
