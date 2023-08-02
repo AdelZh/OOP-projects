@@ -48,7 +48,7 @@ String name;
                 ", price=" + price +
                 ", freshness='" + freshness + '\'' +
                 '}';
-    }
+    
     public String getFreshness() {
         return freshness;
     }
