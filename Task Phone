@@ -1,0 +1,48 @@
+ Phone phone=new Phone("Iphone", "14 pro max", "Black");
+        System.out.println("My phone: "+phone.brand);
+        System.out.println("Version is: "+phone.version);
+        System.out.println("Color is: "+phone.screen);
+
+        Phone phone1=new Phone();
+        phone1.setPrice("1000$");
+        phone1.setMemory(12);
+        System.out.println(phone1.getPrice());
+        System.out.println(phone1.getMemory());
+    }
+
+}
+
+public class Phone {
+
+    String brand;
+    String version;
+    int memory;
+    String price;
+    String screen;
+
+
+    public Phone(String brand, String version, String  screen){
+        this.brand=brand;
+        this.version=version;
+        this.screen=screen;
+
+    }
+    public Phone(){
+
+    }
+   public void setPrice(String price){
+        this.price=price;
+   }
+   public void setMemory(int memory){
+        this.memory=memory;
+   }
+
+   public String getPrice(){
+       return "The price is: "+this.price;
+
+   }
+   public String getMemory(){
+        return "The memory is: "+this.memory;
+
+   }
+}
