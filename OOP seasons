@@ -1,0 +1,73 @@
+Flower f1 = new Flower("Bereza", 22, "Cool");
+        Flower f2 = new Flower("Roza", 56, "Middle");
+        Flower[] arr = {f1, f2};
+        System.out.println("More expensive is: ");
+        System.out.println(num(arr));
+        Flower f11 = new Flower("Berezka", 82, "High");
+        Flower f22 = new Flower("Bereza", 67, "Lower");
+        Flower[] arr1 = {f11, f22};
+        System.out.println("The freshness of the flower is: ");
+        System.out.println(fresh(arr1));
+    }
+    public static Flower num(Flower[] arr) {
+        Flower max = arr[0];
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i].price > max.price) {
+                max = arr[i];
+            }
+        }
+        return max;
+    }
+    public static Flower fresh(Flower[] arr1) {
+        Flower max = arr1[0];
+        for (int i = 0; i < arr1.length; i++) {
+            if (arr1[i].price > max.price) {
+                max = arr1[i];
+            }
+        }
+        return max;
+    }
+String name;
+    int price;
+    String freshness;
+    public Flower(String name, int price, String freshness){
+        this.name=name;
+        this.price=price;
+        this.freshness=freshness;
+    }
+    public String getName(){
+        return name;
+    }
+    public int getPrice(){
+        return price;
+    }
+    @Override
+    public String toString() {
+        return "Flower{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", freshness='" + freshness + '\'' +
+                '}';
+    }
+    public String getFreshness() {
+        return freshness;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+Message Farida Begimbai kyzy
+
+
+
+
+
+
