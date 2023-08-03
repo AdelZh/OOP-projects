@@ -1,0 +1,97 @@
+ public static void main(String[] args) {
+
+        Group group=new Group("java 11", "03-07-2020", "Ainazik", new Person());
+
+        Group [] arr=new Group[1];
+        arr[0]=group;
+
+        System.out.println(arr[0]);
+
+        Company company=new Company();
+        company.name="Adel";
+        company.country="Kyrgyzstan";
+        company.yearOfFoundation=2000;
+        company.founder="Esen Niiazov";
+        company.group=arr;
+        System.out.print(company);
+
+
+        Person person=new Person();
+        person.name="Adel";
+        person.surname="Zhyldyzbekova";
+        person.date=20;
+
+
+        System.out.println(person);
+
+    }
+}
+
+public class Company {
+
+    String name;
+    String country;
+    int yearOfFoundation;
+    String founder;
+    Group [] group;
+
+    Person person;
+
+    public Company(){
+
+    }
+
+    @Override
+    public String toString() {
+        return "Company{" +
+                "name='" + name + '\'' +
+                ", country='" + country + '\'' +
+                ", yearOfFoundation=" + yearOfFoundation +
+                ", founder='" + founder + '\'' +
+                ", group=" + Arrays.toString(group) +
+                ", person=" + person +
+                '}';
+    }
+}
+
+public class Group {
+
+    String name;
+    String startDate;
+    String mentor;
+    Person person;
+
+
+    public Group(String name, String startDate, String  mentor, Person person){
+        this.name=name;
+        this.startDate=startDate;
+        this.mentor=mentor;
+        this.person=person;
+
+    }
+
+    @Override
+    public String toString() {
+        return "Group{" +
+                "name='" + name + '\'' +
+                ", startDate='" + startDate + '\'' +
+                ", mentor='" + mentor + '\'' +
+                ", person=" + person +
+                '}';
+    }
+}
+public class Person {
+    String name;
+    String surname;
+    int date;
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", date=" + date +
+                '}';
+    }
+}
+
